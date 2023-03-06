@@ -1,7 +1,6 @@
 import { Navigate, Routes, Route } from 'react-router-dom';
 import { SharedLayout } from './SharedLayout';
 import { lazy } from "react";
-import { BrowserRouter } from 'react-router-dom';
 
 const Home = lazy(() => import('../pages/Home'));
 const MovieDetails = lazy(() => import('../pages/MovieDetails'));
@@ -11,7 +10,7 @@ const Movies = lazy(() => import('../pages/Movies'));
 
 export const App = () => {
   return (
-    <BrowserRouter>
+
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
@@ -23,6 +22,5 @@ export const App = () => {
           <Route path="*" element={<Navigate to="/" />} />
         </Route>
       </Routes>
-    </BrowserRouter>
   );
 };
