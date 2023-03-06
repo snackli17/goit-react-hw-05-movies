@@ -2,7 +2,7 @@ import { getReviews } from 'API';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Loader from './Loader';
+import Loader from '../../Loader/Loader';
 import css from './Reviews.module.css';
 
 export default function Reviews() {
@@ -27,7 +27,7 @@ export default function Reviews() {
     }
     onGetReviews();
   }, [id]);
-  
+
   return (
     <>
       {isLoading && <Loader />}

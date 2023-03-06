@@ -1,10 +1,9 @@
 import css from './MovieForm.module.css';
-import { ReactComponent as SearchIcon } from '../svg/Search.svg';
+import { ReactComponent as SearchIcon } from './svg/Search.svg';
 import { useSearchParams } from 'react-router-dom';
 
 export const MovieForm = () => {
   const [, setSearchParams] = useSearchParams();
-
   const handleSubmit = evt => {
     evt.preventDefault();
     setSearchParams({ query: evt.target.elements.query.value });

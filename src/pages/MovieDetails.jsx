@@ -2,8 +2,8 @@ import { useEffect, useState, Suspense } from 'react';
 import { Outlet, useParams, Link, useLocation } from 'react-router-dom';
 import { getDetails } from 'API';
 import css from './MovieDetails.module.css';
-import Loader from '../components/Loader';
-import Info from 'components/Info';
+import Loader from '../components/Loader/Loader';
+import Info from 'components/pages/Info/Info';
 
 export default function MovieDetails() {
   const [movieInfo, setMovieInfo] = useState(null);

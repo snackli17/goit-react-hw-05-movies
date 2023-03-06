@@ -1,7 +1,7 @@
 import { getCasts } from 'API';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import Loader from './Loader';
+import Loader from '../../Loader/Loader';
 import css from './Cast.module.css';
 
 export default function Cast() {
